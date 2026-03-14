@@ -1,0 +1,11 @@
+import React from 'react'
+
+function Back() {
+  return (
+    <div className='back'>
+        
+    </div>
+  )
+}
+
+export default Back
