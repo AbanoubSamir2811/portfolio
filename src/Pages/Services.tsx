@@ -36,24 +36,35 @@ function Services() {
   ];
   
   return (
-    <div className='flex flex-col justify-center items-center backColor w-[100vw] h-[100vh] pt-[180px]'>
-      <h1 className='text-amber-500 text-5xl pe-1 text-nowrap m-8'>Services</h1>
-      <section className="mb-[250px]">
-      <div className="max-w-[80%] m-auto">
-        <div className="grid grid-cols-3 gap-5">
+    <div className="backColor w-full min-h-[100vh] pt-[140px] pb-16">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        <h1 className="text-amber-500 text-4xl md:text-5xl text-center text-nowrap mb-10">
+          Services
+        </h1>
+
+        <section className="pb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((item, i) => (
-            <div className="backColorCard text-white h-[40vh] rounded-md p-5 text-2xl flex flex-col justify-evenly" key={i} data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="500">
-              <i className="text-amber-500">{item.icon}</i>
-              <h3>{item.title}</h3>
-              <p className="text-lg">{item.desc}</p>
+            <div
+              className="backColorCard text-white rounded-2xl p-6 flex flex-col gap-3 border border-gray-800/60 shadow-xl"
+              key={i}
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="500"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-amber-500/10 text-amber-500">
+                <i className="text-amber-500">{item.icon}</i>
+              </div>
+              <h3 className="text-lg md:text-xl font-semibold">{item.title}</h3>
+              <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                {item.desc}
+              </p>
             </div>
           ))}
-        </div>
+          </div>
+        </section>
       </div>
-    </section>
-  </div>
+    </div>
   )
 }
 

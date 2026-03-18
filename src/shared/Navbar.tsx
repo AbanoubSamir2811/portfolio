@@ -14,39 +14,46 @@ function Nav() {
     };
 
     return (
-        <Navbar className='w-[100vw] nav text-white fixed top-0 z-50'>
-            <Navbar.Brand>
-                <img src={logo} className="mr-3 h-6 sm:h-9 px-44" alt="Flowbite React Logo" />
+        <Navbar className="w-full nav text-white fixed top-0 z-50">
+            <Navbar.Brand className="px-4 md:px-8">
+                <img
+                    src={logo}
+                    className="mr-3 h-8 w-8 sm:h-9 sm:w-9 rounded-full object-cover"
+                    alt="Logo"
+                />
+                <span className="self-center whitespace-nowrap text-xl text-amber-500">
+                    Abanoub Samir
+                </span>
             </Navbar.Brand>
             <Navbar.Toggle />
-            <Navbar.Collapse className='px-44'>
+            <Navbar.Collapse className="px-4 md:px-8">
                 <button 
                     onClick={() => scrollToSection('home', 0)} 
-                    className={`text-2xl ${activeIndex === 0 ? "text-amber-500" : "text-white"}`}
+                    className={`text-lg md:text-2xl ${activeIndex === 0 ? "text-amber-500" : "text-white"}`}
                 >
                     Home
                 </button>
                 <button 
                     onClick={() => scrollToSection('about', 1)} 
-                    className={`text-2xl ${activeIndex === 1 ? "text-amber-500" : "text-white"}`}
+                    className={`text-lg md:text-2xl ${activeIndex === 1 ? "text-amber-500" : "text-white"}`}
                 >
                     About
                 </button>
                 <button 
                     onClick={() => scrollToSection('services', 2)} 
-                    className={`text-2xl ${activeIndex === 2 ? "text-amber-500" : "text-white"}`}
+                    className={`text-lg md:text-2xl ${activeIndex === 2 ? "text-amber-500" : "text-white"}`}
                 >
                     Services
                 </button>
                 <button 
                     onClick={() => scrollToSection('portfolio', 3)} 
-                    className={`text-2xl ${activeIndex === 3 ? "text-amber-500" : "text-white"}`}
+                    className={`text-lg md:text-2xl ${activeIndex === 3 ? "text-amber-500" : "text-white"}`}
                 >
                     Portfolio
                 </button>
                 <button 
                     onClick={() => scrollToSection('contact', 4)} 
-                    className={`text-2xl ${activeIndex === 4 ? "text-amber-500" : "text-white"}`}
+                    className={`text-lg md:text-2xl ${activeIndex === 4 ? "text-amber-500" : "text-white"}`}
                 >
                     Contact
                 </button>
