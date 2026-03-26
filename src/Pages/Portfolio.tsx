@@ -43,6 +43,7 @@ function Portfolio() {
     {
       id: 5,
       title: "Jop Platform",
+      image: jopplatformImg,
       technologies: ["React js", "tailwind", "typescript"],
       link: "https://jopplatform.vercel.app/"
     },
