@@ -42,8 +42,7 @@ function Portfolio() {
     },
     {
       id: 5,
-      title: "Real Estate Platform",
-      image: jopplatformImg,
+      title: "Jop Platform",
       technologies: ["React js", "tailwind", "typescript"],
       link: "https://jopplatform.vercel.app/"
     },
