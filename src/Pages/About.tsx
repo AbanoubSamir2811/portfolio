@@ -57,6 +57,9 @@ function About() {
                     'Angular',
                     'React js',
                     'Next js',
+                    'AI Agents',
+                    'AI Chatbots',
+                    'Auotmation',
                   ].map((skill) => (
                     <p
                       key={skill}
@@ -75,12 +78,11 @@ function About() {
               About me
             </h2>
             <p className="text-white/90 text-base md:text-lg leading-relaxed">
-              Dedicated Frontend Developer with a solid foundation in web and mobile app
-              development, acquired through an ITI scholarship. Proficient in HTML, CSS,
-              JavaScript, and experienced in building diverse web and mobile applications
-              using Angular, React, Next.js, React Native, and Flutter. Proven track record
-              of successful project delivery. Seeking a dynamic company that values
-              innovation and provides opportunities for professional growth.
+            I’m a Frontend Developer specializing in Angular and React, with a strong focus on building scalable, responsive, and high-performance web applications.
+
+I enjoy turning complex ideas into clean, user-friendly interfaces, and I pay close attention to code structure, reusability, and performance. In my projects, I’ve worked on real-time systems, API integrations, and modular architectures that make applications easier to maintain and extend.
+
+I’m always looking to improve my skills, learn new technologies, and build products that provide real value to users.
             </p>
           </div>
         </div>

@@ -9,11 +9,52 @@ const Contact: React.FC = () => {
     subject: '',
     message: ''
   });
+  const [isSending, setIsSending] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
+  const [statusType, setStatusType] = useState<'success' | 'error' | ''>('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add form submission logic here
-    console.log('Form submitted:', formData);
+    setIsSending(true);
+    setStatusMessage('');
+    setStatusType('');
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/abanoubsamir2811@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: `Portfolio Contact: ${formData.subject}`,
+          _template: 'table'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      setStatusType('success');
+      setStatusMessage('Your message was sent successfully.');
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      setStatusType('error');
+      setStatusMessage('Failed to send message. Please try again.');
+      console.error(error);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -168,11 +209,21 @@ const Contact: React.FC = () => {
               <div className="pt-1">
                 <button
                   type="submit"
+                  disabled={isSending}
                   className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-full text-sm font-medium text-amber-500 border border-amber-500/80 bg-transparent hover:bg-amber-500 hover:text-gray-900 shadow-md shadow-amber-500/10 transition"
                 >
-                  Send Message
+                  {isSending ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
+              {statusMessage && (
+                <p
+                  className={`text-sm text-center ${
+                    statusType === 'success' ? 'text-green-400' : 'text-red-400'
+                  }`}
+                >
+                  {statusMessage}
+                </p>
+              )}
             </form>
           </div>
         </div>

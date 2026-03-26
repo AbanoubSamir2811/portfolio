@@ -1,5 +1,5 @@
 import TypewriterComponent from "typewriter-effect";
-import cv from '../assets/AbanoubSamir_FrontEnd CV.pdf';
+import cv from '../assets/Abanoub_Samir_Front_End CV.pdf';
 
 function First() {
     const home ={
@@ -7,8 +7,7 @@ function First() {
         post: "Frontend Developer",
         design: "React Developer",
         design1: "Angular Developer",
-        design2: "Flutter Developer",
-        design3: "Next Developer",
+        design2: "next Developer",
     }
 
   return (
@@ -21,7 +20,7 @@ function First() {
             <div className="text-4xl">
               <TypewriterComponent
                   options={{
-                      strings: [`${home.name}`, `${home.post}`, `${home.design}`, `${home.design1}`, `${home.design2}`, `${home.design3}`],
+                      strings: [`${home.name}`, `${home.post}`, `${home.design}`, `${home.design1}`, `${home.design2}`],
                       autoStart: true,
                       loop: true,
                   }}
@@ -29,7 +28,9 @@ function First() {
             </div>
 
             <div className="mt-5 md:mt-6 text-sm sm:text-base md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-              Experienced Application/Web Developer with a strong foundation in React, Angular, Next.js, Flutter, and React Native. Proficient in HTML, CSS, JavaScript, Material UI, Bootstrap, and Tailwind CSS for designing and deploying user-friendly interfaces. Committed to delivering exceptional user experiences while aligning development efforts with business objectives to create high-quality products.
+            If you’d like to learn more about my experience and technical background, feel free to download my CV using the button below.
+
+It includes detailed information about my projects, skills, and the technologies I’ve worked with.
             </div>
             <button className="primaryBtn text-base sm:text-lg md:text-2xl flex items-center justify-center border-amber-500 border-2 rounded-full border-solid mt-5 h-12" data-aos="fade-up-right">
               <a href={cv} download style={{ textDecoration: "none", color: "#e0a80d" }}

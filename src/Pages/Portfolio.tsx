@@ -5,6 +5,9 @@ import hospitalImg from '../assets/hospital.jpg';
 import taskImg from '../assets/task.jpeg';
 import rovaniotoursImg from '../assets/rovaniotours.jpeg';
 import digitalplusImg from '../assets/digital plus.png';
+import eventlyImg from '../assets/evently.jpeg';
+import jopplatformImg from '../assets/ihbk.jpeg';
+import shopImg from '../assets/inolekw.jpg';
 
 function Portfolio() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -27,30 +30,37 @@ function Portfolio() {
       id: 3,
       title: "Rovaniotours",
       image: rovaniotoursImg ,
-      technologies: ["React", "Redux", "Material UI"],
+      technologies: ["React", "Redux", "tailwind"],
       link: "https://rovaniotours-delta.vercel.app/"
     },
     {
       id: 4,
       title: "Digital Plus",
       image: digitalplusImg,
-      technologies: ["Flutter", "Firebase", "Dart"],
+      technologies: ["React js", "tailwind", "typescript"],
       link: "https://digitalplus-ochre.vercel.app/"
     },
     {
       id: 5,
       title: "Real Estate Platform",
-      image: "https://via.placeholder.com/300x200",
-      technologies: ["Next.js", "Prisma", "PostgreSQL"],
-      link: "#"
+      image: jopplatformImg,
+      technologies: ["React js", "tailwind", "typescript"],
+      link: "https://jopplatform.vercel.app/"
     },
     {
       id: 6,
-      title: "Food Delivery App",
-      image: "https://via.placeholder.com/300x200",
-      technologies: ["React Native", "Node.js", "MongoDB"],
-      link: "#"
-    }
+      title: "E-Commerce",
+      image: shopImg,
+      technologies: ["React js", "tailwind", "typescript"],
+      link: "https://ecommerce-kappa-tawny-82.vercel.app/"
+    },
+    {
+      id: 7,
+      title: "Evently",
+      image: eventlyImg,
+      technologies: ["React js", "tailwind", "typescript"],
+      link: "https://evently-flame-gamma.vercel.app/"
+    },
   ];
 
   const scroll = (direction: 'left' | 'right') => {
